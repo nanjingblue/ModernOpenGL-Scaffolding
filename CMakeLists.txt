@@ -8,8 +8,9 @@ set(LIB_DIR ${DEPENDENCIES}/GLFW/lib-mingw-w64)
 
 include_directories(${DEPENDENCIES}/GLFW/include)
 include_directories(${DEPENDENCIES}/GLAD/include)
+include_directories(${SOURCE_DIR})
 link_libraries(${DEPENDENCIES}/GLFW/lib-mingw-w64)
 link_libraries(${DEPENDENCIES}/GLFW/lib-vc2019)
 
-add_executable(ModernOpenGL WIN32 ${SOURCE_DIR}/main.cpp ${SOURCE_DIR}/glad.c)
+add_executable(ModernOpenGL WIN32 ${SOURCE_DIR}/main.cpp src/glad.c src/config.cpp)
 target_link_libraries(ModernOpenGL ${LIB_DIR}/libglfw3.a)
