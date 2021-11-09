@@ -8,6 +8,7 @@ set(LIB_DIR ${DEPENDENCIES}/GLFW/lib-mingw-w64)
 
 include_directories(${DEPENDENCIES}/GLFW/include)
 include_directories(${DEPENDENCIES}/GLAD/include)
+include_directories(${DEPENDENCIES}/GLM)
 include_directories(${SOURCE_DIR})
 link_libraries(${DEPENDENCIES}/GLFW/lib-mingw-w64)
 link_libraries(${DEPENDENCIES}/GLFW/lib-vc2019)
